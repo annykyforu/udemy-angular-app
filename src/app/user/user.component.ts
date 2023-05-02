@@ -6,9 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent {
-  userName: String;
+  userName: String = '';
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  noUserName() {
+    return this.userName === undefined || this.userName === '';
+  }
+
+  resetUserName() {
+    this.userName = '';
+  }
 }

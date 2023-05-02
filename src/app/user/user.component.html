@@ -1,9 +1,20 @@
-<form>
-  <div class='mb-3'>
-    <label class='form-label'>Username</label>
-    <input aria-label='Username' class='form-control' placeholder='Username' type='text' />
-  </div>
-  <button [disabled]='' class='btn btn-primary' type='button'>Reset Username</button>
-</form>
+<div class='mb-3'>
+  <label class='form-label'>Username</label>
+  <input
+    [(ngModel)]='userName'
+    aria-label='Username'
+    class='form-control'
+    placeholder='Username'
+    type='text'
+  />
+</div>
+<button
+  (click)='resetUserName()'
+  [disabled]='noUserName'
+  class='btn btn-primary'
+  type='button'
+>
+  Reset Username
+</button>
 
-Value: {{ userName }}
+<p class='mt-5'>Value: {{ userName }}</p>
