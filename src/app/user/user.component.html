@@ -9,8 +9,8 @@
   />
 </div>
 <button
-  (click)='resetUserName()'
-  [disabled]='noUserName'
+  (click)='onResetUserName()'
+  [disabled]='!userName'
   class='btn btn-primary'
   type='button'
 >

@@ -12,11 +12,7 @@ export class UserComponent {
 
   ngOnInit(): void {}
 
-  noUserName() {
-    return this.userName === undefined || this.userName === '';
-  }
-
-  resetUserName() {
+  onResetUserName() {
     this.userName = '';
   }
 }
