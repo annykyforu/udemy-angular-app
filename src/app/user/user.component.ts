@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
   userName: String = '';
+  displayDetails: Boolean = false;
+  logButtonClicks: Array<Date> = [];
 
   constructor() {}
 
@@ -14,5 +16,10 @@ export class UserComponent {
 
   onResetUserName() {
     this.userName = '';
+  }
+
+  onDisplayDetails() {
+    this.displayDetails = !this.displayDetails;
+    this.logButtonClicks.push(new Date());
   }
 }

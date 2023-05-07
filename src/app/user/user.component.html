@@ -1,10 +1,11 @@
+<h3>Section 3: Data Binding</h3>
 <div class='mb-3'>
-  <label class='form-label'>Username</label>
+  <label class='form-label fw-bold'>Username</label>
   <input
     [(ngModel)]='userName'
     aria-label='Username'
     class='form-control'
-    placeholder='Username'
+    placeholder='Enter your Username'
     type='text'
   />
 </div>
@@ -16,5 +17,22 @@
 >
   Reset Username
 </button>
+<p class='mt-4 fw-bold'>Value: {{ userName }}</p>
 
-<p class='mt-5'>Value: {{ userName }}</p>
+<h3>Section 3: Directives</h3>
+
+<button
+  (click)='onDisplayDetails()'
+  class='btn btn-primary'
+  type='button'>
+  Display Details
+</button>
+
+<p *ngIf='displayDetails'>
+  Secret Password: tuna
+</p>
+
+<h5 class='mt-4'>Timestamp when the button was clicked</h5>
+<p *ngFor='let logClick of logButtonClicks'>
+  {{ logClick }}
+</p>
